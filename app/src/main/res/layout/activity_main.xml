@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:src="@drawable/userprofile"
+        android:layout_marginLeft="57dp"
+        android:id="@+id/main_activity_imageViewUserNameBg"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/main_activity_circleImageViewProfile"
+        app:layout_constraintBottom_toBottomOf="@+id/main_activity_circleImageViewProfile"
+        app:layout_constraintLeft_toLeftOf="@+id/main_activity_circleImageViewProfile"    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:maxLength="15"
+        android:textSize="13sp"
+        android:text="Tuğba"
+        android:textColor="@color/mainUserNameTextColor"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/main_activity_imageViewUserNameBg"
+        app:layout_constraintBottom_toBottomOf="@+id/main_activity_imageViewUserNameBg"
+        app:layout_constraintRight_toRightOf="@+id/main_activity_imageViewUserNameBg"
+        app:layout_constraintLeft_toLeftOf="@+id/main_activity_imageViewUserNameBg"            />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="66dp"
+        android:src="@drawable/ic_person"
+        android:layout_height="66dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/main_activity_circleImageViewProfile"
+        app:civ_border_width="8dp"
+        app:civ_border_color="@color/mainCircleImageBorderColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <!--1 circleimagewiev kütüphanesini tanımladım gradle'a
+     drawable klosörüne vector assert kısmından person(ic_person) şeklini ekledim
+     civ_border ile çerçeve ekledik -->
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/settings_48px"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_activity_circleImageViewProfile" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/appnamelogo"
+        android:id="@+id/main_activity_imageViewAppNameLogo"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintTop_toTopOf="@+id/main_activity_circleImageViewProfile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <!-- soluna göre sağına göre ortaladı
+     wrap: genişliği ve yüksekliği ne kadarsa o kadar olsun -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_imageViewAppNameLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <!--sayfaya göre ortaladı -->
+
+        <Button
+            android:layout_width="180dp"
+            android:onClick="mainBtnClick"
+            android:background="@drawable/btn_play_bg"
+            android:layout_marginTop="15dp"
+            android:id="@+id/main_activity_btnPlay"
+            android:layout_height="50dp"/>
+        <!-- 3.  onclick özelliğini ekledik mainbtnclick ismini verdik -->
+        <Button
+            android:layout_width="180dp"
+            android:onClick="mainBtnClick"
+            android:background="@drawable/btn_shop_bg"
+            android:layout_marginTop="15dp"
+            android:id="@+id/main_activity_btnShop"
+            android:layout_height="50dp"/>
+
+        <Button
+            android:layout_width="180dp"
+            android:onClick="mainBtnClick"
+            android:background="@drawable/btn_exit_bg"
+            android:layout_marginTop="15dp"
+            android:id="@+id/main_activity_btnExit"
+            android:layout_height="50dp"/>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

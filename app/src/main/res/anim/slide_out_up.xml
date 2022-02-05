@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate android:fromYDelta="-100%" android:toYDelta="0"
+        android:duration="@android:integer/config_mediumAnimTime"/>
+
+    <!--5 res klosöründe resource directory ekledik. anim klosöründen de bu dosyayı oluşturduk
+
+    animasyonun ne kadar sürede nereye doğru gideceğini belirledik .  -->
+</set>
